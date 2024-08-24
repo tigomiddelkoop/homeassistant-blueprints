@@ -46,7 +46,7 @@ blueprint:
       selector:
         action: {}
 
-# Commented out because I have not found a way to seperate these events from each other
+# Commented out because I have not found a way to seperate these events from each other, yet
     #Scene_Two_Hold:
     #  name: Scene 2 Hold
     #  description: Scene 2 button held
@@ -136,7 +136,7 @@ action:
       - conditions: '{{ command == "step_with_on_off" and step_mode == "StepMode.Down" and step_size == 255}}'
         sequence: !input Scene_One_Hold
 
-# Commented out because I have not found a way to seperate these events from each other
+# Commented out because I have not found a way to seperate these events from each other, yet
       #- conditions: '{{ command_type == "recall" and scene_id == 1}}'
       #  sequence: !input Scene_Two_Hold
 
