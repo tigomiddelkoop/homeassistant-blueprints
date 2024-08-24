@@ -1,0 +1,153 @@
+blueprint:
+  domain: automation
+  name: Philips Hue Tap Dial Switch
+  description: Philips Hue Tap Dial Switch (RDM002) configuration using ZHA
+
+  input:
+    zha_device:
+      name: Philips Hue Tap Dial Switch
+      description: List of available Philips Hue Tap Dial Switches
+      selector:
+        device:
+          integration: zha
+          model: RDM002
+          multiple: false
+
+    Scene_One_Press:
+      name: Scene 1 Single Press
+      description: Scene 1 button pressed 1 time
+      default: []
+      selector:
+        action: {}
+    Scene_Two_Press:
+      name: Scene 2 Single Press
+      description: Scene 2 button pressed 1 time
+      default: []
+      selector:
+        action: {}
+    Scene_Three_Press:
+      name: Scene 3 Single Press
+      description: Scene 3 button pressed 1 time
+      default: []
+      selector:
+        action: {}
+    Scene_Four_Press:
+      name: Scene 4 Single Press
+      description: Scene 4 button pressed 1 time
+      default: []
+      selector:
+        action: {}
+
+# The hold functionality works, but it triggers on all 4 buttons.
+    Scene_One_Hold:
+      name: Scene 1-4 Hold
+      description: Scene 1-4 button held (zha_event limitation)
+      default: []
+      selector:
+        action: {}
+
+# Commented out because I have not found a way to seperate these events from each other
+    #Scene_Two_Hold:
+    #  name: Scene 2 Hold
+    #  description: Scene 2 button held
+    #  default: []
+    #  selector:
+    #    action: {}
+    #Scene_Three_Hold:
+    #  name: Scene 3 Hold
+    #  description: Scene 3 button held
+    #  default: []
+    #  selector:
+    #    action: {}
+    #Scene_Four_Hold:
+    #  name: Scene 4 Hold
+    #  description: Scene 4 button held
+    #  default: []
+    #  selector:
+    #    action: {}
+
+    Rotary_Clockwise:
+      name: Clockwise Rotation
+      description: |
+        Rotary dial rotated in the clockwise orientation
+        You can use the {{ step_size }} variable to get the step_size
+        Fun for dynamically changing the light brightness based on the dial speed
+      default: []
+      selector:
+        action: {}
+    Rotary_Counterclockwise:
+      name: Counter Clockwise Rotation
+      description: |
+        Rotary dial rotated in the counter clockwise orientation
+        You can use the {{ step_size }} variable to get the step_size
+        Fun for dynamically changing the light brightness based on the dial speed
+      default: []
+      selector:
+        action: {}
+
+mode: single
+max_exceeded: silent
+variables:
+  device_id: !input zha_device
+
+trigger:
+  - platform: event
+    event_type: zha_event
+condition: "{{ trigger.event.data.device_id == device_id }}"
+
+action:
+  - variables:
+      command: "{{ trigger.event.data.command }}"
+      scene_id: "{{ trigger.event.data.params.scene_id }}"
+      step_mode: "{{ trigger.event.data.params.step_mode }}"
+      step_size: "{{ trigger.event.data.params.step_size }}"
+
+  - service: logbook.log
+    data:
+      name: Scene id
+      message: "{{ scene_id }}"
+  - service: logbook.log
+    data:
+      name: Step mode
+      message: "{{ step_mode }}"
+  - service: logbook.log
+    data:
+      name: Device
+      message: "{{ zha_device }}"
+  - service: logbook.log
+    data:
+      name: Command
+      message: "{{ command }}"
+
+  - choose:
+      - conditions: '{{ command == "recall" and scene_id == 1 }}'
+        sequence: !input Scene_One_Press
+
+      - conditions: '{{ command == "recall" and scene_id == 0 }}'
+        sequence: !input Scene_Two_Press
+
+      - conditions: '{{ command == "recall" and scene_id == 5 }}'
+        sequence: !input Scene_Three_Press
+
+      - conditions: '{{ command == "recall" and scene_id == 4 }}'
+        sequence: !input Scene_Four_Press
+
+# The hold functionality works, but it triggers on all 4 buttons.
+      - conditions: '{{ command == "step_with_on_off" and step_mode == "StepMode.Down" and step_size == 255}}'
+        sequence: !input Scene_One_Hold
+
+# Commented out because I have not found a way to seperate these events from each other
+      #- conditions: '{{ command_type == "recall" and scene_id == 1}}'
+      #  sequence: !input Scene_Two_Hold
+
+      #- conditions: '{{ command_type == "recall" and scene_id == 1}}'
+      #  sequence: !input Scene_Three_Hold
+
+      #- conditions: '{{ command_type == "recall" and scene_id == 1}}'
+      #  sequence: !input Scene_Four_Hold
+
+      - conditions: '{{ command == "step_with_on_off" and step_mode == "StepMode.Up" and step_size < 255}}'
+        sequence: !input Rotary_Clockwise
+
+      - conditions: '{{ command == "step_with_on_off" and step_mode == "StepMode.Down" and step_size < 255}}'
+        sequence: !input Rotary_Counterclockwise
