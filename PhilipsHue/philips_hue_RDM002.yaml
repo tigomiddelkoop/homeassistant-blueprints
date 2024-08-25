@@ -1,6 +1,6 @@
 blueprint:
   domain: automation
-  name: Philips Hue Tap Dial Switch
+  name: Philips Hue Tap Dial Switch (RDM002)
   description: Philips Hue Tap Dial Switch (RDM002) configuration using ZHA
 
   input:

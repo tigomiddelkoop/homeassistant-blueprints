@@ -1,0 +1,307 @@
+blueprint:
+  domain: automation
+  name: Philips Hue Smart Remote v1 (RWL021)
+  description: Philips Hue v1 Remotes (RWL021) configuration using ZHA
+
+  input:
+    zha_device:
+      name: Philips Hue Remote v1
+      description: List of available Philips Hue v1 Remotes
+      selector:
+        device:
+          integration: zha
+          model: RWL021
+          multiple: false
+
+    PowerOn_Press:
+      name: Power On Press
+      description: Power On has been pressed
+      default: [ ]
+      selector:
+        action: { }
+    PowerOn_Press2x:
+      name: Power On Press 2x
+      description: Power On has been pressed 2x times
+      default: [ ]
+      selector:
+        action: { }
+    PowerOn_Press3x:
+      name: Power On Press 3x
+      description: Power On has been pressed 3x times
+      default: [ ]
+      selector:
+        action: { }
+    PowerOn_Press4x:
+      name: Power On Press 4x
+      description: Power On has been pressed 4x times
+      default: [ ]
+      selector:
+        action: { }
+    PowerOn_Press5x:
+      name: Power On Press 5x
+      description: Power On has been pressed 5x times
+      default: [ ]
+      selector:
+        action: { }
+    PowerOn_Release:
+      name: Power On Release
+      description: Power On has been released
+      default: [ ]
+      selector:
+        action: { }
+    PowerOn_HoldPress:
+      name: Power On Hold
+      description: Power On has been held down
+      default: [ ]
+      selector:
+        action: { }
+    PowerOn_HoldRelease:
+      name: Power On Hold Release
+      description: Power On has been released after held down
+      default: [ ]
+      selector:
+        action: { }
+
+    IncreaseBrightness_Press:
+      name: Increase Brightness Press
+      description: Decrease Brightness has been pressed
+      default: [ ]
+      selector:
+        action: { }
+    IncreaseBrightness_Press2x:
+      name: Increase Brightness Press 2x
+      description: Increase Brightness has been pressed 2x times
+      default: [ ]
+      selector:
+        action: { }
+    IncreaseBrightness_Press3x:
+      name: Increase Brightness Press 3x
+      description: Increase Brightness has been pressed 3x times
+      default: [ ]
+      selector:
+        action: { }
+    IncreaseBrightness_Press4x:
+      name: Increase Brightness Press 4x
+      description: Increase Brightness has been pressed 4x times
+      default: [ ]
+      selector:
+        action: { }
+    IncreaseBrightness_Press5x:
+      name: Decrease Brightness Press 5x
+      description: Increase Brightness has been pressed 5x times
+      default: [ ]
+      selector:
+        action: { }
+    IncreaseBrightness_Release:
+      name: Increase Brightness Release
+      description: Increase Brightness has been released
+      default: [ ]
+      selector:
+        action: { }
+    IncreaseBrightness_HoldPress:
+      name: Increase Brightness Hold
+      description: Increase Brightness has been held down
+      default: [ ]
+      selector:
+        action: { }
+    IncreaseBrightness_HoldRelease:
+      name: Increase Brightness Hold Release
+      description: Increase Brightness has been released after held down
+      default: [ ]
+      selector:
+        action: { }
+
+    DecreaseBrightness_Press:
+      name: Decrease Brightness Press
+      description: Decrease Brightness has been pressed
+      default: [ ]
+      selector:
+        action: { }
+    DecreaseBrightness_Press2x:
+      name: Decrease Brightness 2x
+      description: Decrease Brightness has been pressed 2x times
+      default: [ ]
+      selector:
+        action: { }
+    DecreaseBrightness_Press3x:
+      name: Decrease Brightness 3x
+      description: Decrease Brightness has been pressed 3x times
+      default: [ ]
+      selector:
+        action: { }
+    DecreaseBrightness_Press4x:
+      name: Decrease Brightness Press 4x
+      description: Decrease Brightness has been pressed 4x times
+      default: [ ]
+      selector:
+        action: { }
+    DecreaseBrightness_Press5x:
+      name: Decrease Brightness Press 5x
+      description: Decrease Brightness has been pressed 5x times
+      default: [ ]
+      selector:
+        action: { }
+    DecreaseBrightness_Release:
+      name: Decrease Brightness Release
+      description: Decrease Brightness has been released
+      default: [ ]
+      selector:
+        action: { }
+    DecreaseBrightness_HoldPress:
+      name: Decrease Brightness Hold
+      description: Decrease Brightness has been held down
+      default: [ ]
+      selector:
+        action: { }
+    DecreaseBrightness_HoldRelease:
+      name: Decrease Brightness Hold Release
+      description: Decrease Brightness has been released after held down
+      default: [ ]
+      selector:
+        action: { }
+
+    PowerOff_Press:
+      name: Power Off Press
+      description: Power Off has been pressed
+      default: [ ]
+      selector:
+        action: { }
+    PowerOff_Press2x:
+      name: Power Off Press 2x
+      description: Power Off has been pressed 2 times
+      default: [ ]
+      selector:
+        action: { }
+    PowerOff_Press3x:
+      name: Power Off Press 3x
+      description: Power Off has been pressed 3 times
+      default: [ ]
+      selector:
+        action: { }
+    PowerOff_Press4x:
+      name: Power Off Press 4x
+      description: Power Off has been pressed 4 times
+      default: [ ]
+      selector:
+        action: { }
+    PowerOff_Press5x:
+      name: Power Off Press 5x
+      description: Power Off has been pressed 5 times
+      default: [ ]
+      selector:
+        action: { }
+    PowerOff_Release:
+      name: Power Off Release
+      description: Power Off has been released
+      default: [ ]
+      selector:
+        action: { }
+    PowerOff_HoldPress:
+      name: Power Off Hold
+      description: Power Off has been held down
+      default: [ ]
+      selector:
+        action: { }
+    PowerOff_HoldRelease:
+      name: Power Off Hold Release
+      description: Power Off has been released after held down
+      default: [ ]
+      selector:
+        action: { }
+
+mode: single
+max_exceeded: silent
+variables:
+  device_id: !input zha_device
+
+trigger:
+  - platform: event
+    event_type: zha_event
+condition: "{{ trigger.event.data.device_id == device_id }}"
+
+action:
+  - variables:
+      button: "{{ trigger.event.data.args.button }}"
+      press_type: "{{ trigger.event.data.args.press_type }}"
+      command_type: "{{ trigger.event.data.command }}"
+  - service: logbook.log
+    data:
+      name: Button
+      message: "{{ button }}"
+  - service: logbook.log
+    data:
+      name: Press Type
+      message: "{{ press_type }}"
+  - service: logbook.log
+    data:
+      name: Device
+      message: "{{ zha_device }}"
+  - service: logbook.log
+    data:
+      name: Command
+      message: "{{ command_type }}"
+  - choose:
+      - conditions: '{{ command_type == "on_press" }}'
+        sequence: !input PowerOn_Press
+      - conditions: '{{ command_type == "on_double_press" }}'
+        sequence: !input PowerOn_Press2x
+      - conditions: '{{ command_type == "on_triple_press" }}'
+        sequence: !input PowerOn_Press3x
+      - conditions: '{{ command_type == "on_quadruple_press" }}'
+        sequence: !input PowerOn_Press4x
+      - conditions: '{{ command_type == "on_quintuple_press" }}'
+        sequence: !input PowerOn_Press5x
+      - conditions: '{{ command_type == "on_short_release" }}'
+        sequence: !input PowerOn_Release
+      - conditions: '{{ command_type == "on_hold" }}'
+        sequence: !input PowerOn_HoldPress
+      - conditions: '{{ command_type == "on_long_release" }}'
+        sequence: !input PowerOn_HoldRelease
+      - conditions: '{{ command_type == "up_press" }}'
+        sequence: !input IncreaseBrightness_Press
+      - conditions: '{{ command_type == "up_double_press" }}'
+        sequence: !input IncreaseBrightness_Press2x
+      - conditions: '{{ command_type == "up_triple_press" }}'
+        sequence: !input IncreaseBrightness_Press3x
+      - conditions: '{{ command_type == "up_quadruple_press" }}'
+        sequence: !input IncreaseBrightness_Press4x
+      - conditions: '{{ command_type == "up_quintuple_press" }}'
+        sequence: !input IncreaseBrightness_Press5x
+      - conditions: '{{ command_type == "up_short_release" }}'
+        sequence: !input IncreaseBrightness_Release
+      - conditions: '{{ command_type == "up_hold" }}'
+        sequence: !input IncreaseBrightness_HoldPress
+      - conditions: '{{ command_type == "up_long_release" }}'
+        sequence: !input IncreaseBrightness_HoldRelease
+      - conditions: '{{ command_type == "down_press" }}'
+        sequence: !input DecreaseBrightness_Press
+      - conditions: '{{ command_type == "down_double_press" }}'
+        sequence: !input DecreaseBrightness_Press2x
+      - conditions: '{{ command_type == "down_triple_press" }}'
+        sequence: !input DecreaseBrightness_Press3x
+      - conditions: '{{ command_type == "down_quadruple_press" }}'
+        sequence: !input DecreaseBrightness_Press4x
+      - conditions: '{{ command_type == "down_quintuple_press" }}'
+        sequence: !input DecreaseBrightness_Press5x
+      - conditions: '{{ command_type == "down_short_release" }}'
+        sequence: !input DecreaseBrightness_Release
+      - conditions: '{{ command_type == "down_hold" }}'
+        sequence: !input DecreaseBrightness_HoldPress
+      - conditions: '{{ command_type == "down_long_release" }}'
+        sequence: !input DecreaseBrightness_HoldRelease
+      - conditions: '{{ command_type == "off_press" }}'
+        sequence: !input PowerOff_Press
+      - conditions: '{{ command_type == "off_double_press" }}'
+        sequence: !input PowerOff_Press2x
+      - conditions: '{{ command_type == "off_triple_press" }}'
+        sequence: !input PowerOff_Press3x
+      - conditions: '{{ command_type == "off_quadruple_press" }}'
+        sequence: !input PowerOff_Press4x
+      - conditions: '{{ command_type == "off_quintuple_press" }}'
+        sequence: !input PowerOff_Press5x
+      - conditions: '{{ command_type == "off_short_release" }}'
+        sequence: !input PowerOff_Release
+      - conditions: '{{ command_type == "off_hold" }}'
+        sequence: !input PowerOff_HoldPress
+      - conditions: '{{ command_type == "off_long_release" }}'
+        sequence: !input PowerOff_HoldRelease
