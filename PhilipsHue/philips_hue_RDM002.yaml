@@ -1,6 +1,6 @@
 blueprint:
   domain: automation
-  name: Philips Hue Tap Dial Switch (RDM002)
+  name: Philips Hue Tap Dial Switch
   description: Philips Hue Tap Dial Switch (RDM002) configuration using ZHA
 
   input:
@@ -13,58 +13,201 @@ blueprint:
           model: RDM002
           multiple: false
 
-    Scene_One_Press:
-      name: Scene 1 Single Press
-      description: Scene 1 button pressed 1 time
+    Button_1_1x_Press:
+      name: Button 1 Single 1 (1x) Press
+      description: Button 1 was pressed 1 time
       default: []
       selector:
         action: {}
-    Scene_Two_Press:
-      name: Scene 2 Single Press
-      description: Scene 2 button pressed 1 time
+    Button_1_2x_Press:
+      name: Button 1 Double (2x) Press
+      description: Button 1 was pressed 2 times
       default: []
       selector:
         action: {}
-    Scene_Three_Press:
-      name: Scene 3 Single Press
-      description: Scene 3 button pressed 1 time
+    Button_1_3x_Press:
+      name: Button 1 Triple (3x) Press
+      description: Button 1 was pressed 3 times
       default: []
       selector:
         action: {}
-    Scene_Four_Press:
-      name: Scene 4 Single Press
-      description: Scene 4 button pressed 1 time
+    Button_1_4x_Press:
+      name: Button 1 Quadruple  (4x) Press
+      description: Button 1 was pressed 4 times
+      default: []
+      selector:
+        action: {}
+    Button_1_5x_Press:
+      name: Button 1 Quintuple (5x) Press
+      description: Button 1 was pressed 5 times
+      default: []
+      selector:
+        action: {}
+    Button_1_Long_Press:
+      name: Button 1 Long Press
+      description: Button 1 was pressed for a longer time
+      default: []
+      selector:
+        action: {}
+    Button_1_Long_Release:
+      name: Button 1 Long Release
+      description: Button 1 was released after a longer press
+      default: []
+      selector:
+        action: {}
+    Button_1_Short_Release:
+      name: Button 1 Short Release
+      description: Button 1 was released after a shorter press
       default: []
       selector:
         action: {}
 
-# The hold functionality works, but it triggers on all 4 buttons.
-    Scene_One_Hold:
-      name: Scene 1-4 Hold
-      description: Scene 1-4 button held (zha_event limitation)
+    Button_2_1x_Press:
+      name: Button 2 Single 1 (1x) Press
+      description: Button 2 was pressed 1 time
+      default: []
+      selector:
+        action: {}
+    Button_2_2x_Press:
+      name: Button 2 Double (2x) Press
+      description: Button 2 was pressed 2 times
+      default: []
+      selector:
+        action: {}
+    Button_2_3x_Press:
+      name: Button 2 Triple (3x) Press
+      description: Button 2 was pressed 3 times
+      default: []
+      selector:
+        action: {}
+    Button_2_4x_Press:
+      name: Button 2 Quadruple  (4x) Press
+      description: Button 2 was pressed 4 times
+      default: []
+      selector:
+        action: {}
+    Button_2_5x_Press:
+      name: Button 2 Quintuple (5x) Press
+      description: Button 2 was pressed 5 times
+      default: []
+      selector:
+        action: {}
+    Button_2_Long_Press:
+      name: Button 2 Long Press
+      description: Button 2 was pressed for a longer time
+      default: []
+      selector:
+        action: {}
+    Button_2_Long_Release:
+      name: Button 2 Long Release
+      description: Button 2 was released after a longer press
+      default: []
+      selector:
+        action: {}
+    Button_2_Short_Release:
+      name: Button 2 Short Release
+      description: Button 2 was released after a shorter press
       default: []
       selector:
         action: {}
 
-# Commented out because I have not found a way to seperate these events from each other, yet
-    #Scene_Two_Hold:
-    #  name: Scene 2 Hold
-    #  description: Scene 2 button held
-    #  default: []
-    #  selector:
-    #    action: {}
-    #Scene_Three_Hold:
-    #  name: Scene 3 Hold
-    #  description: Scene 3 button held
-    #  default: []
-    #  selector:
-    #    action: {}
-    #Scene_Four_Hold:
-    #  name: Scene 4 Hold
-    #  description: Scene 4 button held
-    #  default: []
-    #  selector:
-    #    action: {}
+    Button_3_1x_Press:
+      name: Button 3 Single 1 (1x) Press
+      description: Button 3 was pressed 1 time
+      default: []
+      selector:
+        action: {}
+    Button_3_2x_Press:
+      name: Button 3 Double (2x) Press
+      description: Button 3 was pressed 2 times
+      default: []
+      selector:
+        action: {}
+    Button_3_3x_Press:
+      name: Button 3 Triple (3x) Press
+      description: Button 3 was pressed 3 times
+      default: []
+      selector:
+        action: {}
+    Button_3_4x_Press:
+      name: Button 3 Quadruple  (4x) Press
+      description: Button 3 was pressed 4 times
+      default: []
+      selector:
+        action: {}
+    Button_3_5x_Press:
+      name: Button 3 Quintuple (5x) Press
+      description: Button 3 was pressed 5 times
+      default: []
+      selector:
+        action: {}
+    Button_3_Long_Press:
+      name: Button 3 Long Press
+      description: Button 3 was pressed for a longer time
+      default: []
+      selector:
+        action: {}
+    Button_3_Long_Release:
+      name: Button 3 Long Release
+      description: Button 3 was released after a longer press
+      default: []
+      selector:
+        action: {}
+    Button_3_Short_Release:
+      name: Button 3 Short Release
+      description: Button 3 was released after a shorter press
+      default: []
+      selector:
+        action: {}
+
+    Button_4_1x_Press:
+      name: Button 4 Single 1 (1x) Press
+      description: Button 4 was pressed 1 time
+      default: []
+      selector:
+        action: {}
+    Button_4_2x_Press:
+      name: Button 4 Double (2x) Press
+      description: Button 4 was pressed 2 times
+      default: []
+      selector:
+        action: {}
+    Button_4_3x_Press:
+      name: Button 4 Triple (3x) Press
+      description: Button 4 was pressed 3 times
+      default: []
+      selector:
+        action: {}
+    Button_4_4x_Press:
+      name: Button 4 Quadruple  (4x) Press
+      description: Button 4 was pressed 4 times
+      default: []
+      selector:
+        action: {}
+    Button_4_5x_Press:
+      name: Button 4 Quintuple (5x) Press
+      description: Button 4 was pressed 5 times
+      default: []
+      selector:
+        action: {}
+    Button_4_Long_Press:
+      name: Button 4 Long Press
+      description: Button 4 was pressed for a longer time
+      default: []
+      selector:
+        action: {}
+    Button_4_Long_Release:
+      name: Button 4 Long Release
+      description: Button 4 was released after a longer press
+      default: []
+      selector:
+        action: {}
+    Button_4_Short_Release:
+      name: Button 4 Short Release
+      description: Button 4 was released after a shorter press
+      default: []
+      selector:
+        action: {}
 
     Rotary_Clockwise:
       name: Clockwise Rotation
@@ -98,14 +241,14 @@ condition: "{{ trigger.event.data.device_id == device_id }}"
 action:
   - variables:
       command: "{{ trigger.event.data.command }}"
-      scene_id: "{{ trigger.event.data.params.scene_id }}"
       step_mode: "{{ trigger.event.data.params.step_mode }}"
       step_size: "{{ trigger.event.data.params.step_size }}"
+      button: "{{ trigger.event.data.params.button }}"
 
   - service: logbook.log
     data:
-      name: Scene id
-      message: "{{ scene_id }}"
+      name: Button
+      message: "{{ button }}"
   - service: logbook.log
     data:
       name: Step mode
@@ -120,34 +263,80 @@ action:
       message: "{{ command }}"
 
   - choose:
-      - conditions: '{{ command == "recall" and scene_id == 1 }}'
-        sequence: !input Scene_One_Press
+      # Button 1
+      - conditions: '{{ command == "button_1_press" }}'
+        sequence: !input Button_1_1x_Press
+      - conditions: '{{ command == "button_1_double_press" }}'
+        sequence: !input Button_1_2x_Press
+      - conditions: '{{ command == "button_1_triple_press" }}'
+        sequence: !input Button_1_3x_Press
+      - conditions: '{{ command == "button_1_quadruple_press" }}'
+        sequence: !input Button_1_4x_Press
+      - conditions: '{{ command == "button_1_quintuple_press" }}'
+        sequence: !input Button_1_5x_Press
+      - conditions: '{{ command == "button_1_hold" }}'
+        sequence: !input Button_1_Long_Press
+      - conditions: '{{ command == "button_1_short_release" }}'
+        sequence: !input Button_1_Long_Release
+      - conditions: '{{ command == "button_1_long_release" }}'
+        sequence: !input Button_1_Short_Release
 
-      - conditions: '{{ command == "recall" and scene_id == 0 }}'
-        sequence: !input Scene_Two_Press
+      # Button 2
+      - conditions: '{{ command == "button_2_press" }}'
+        sequence: !input Button_2_1x_Press
+      - conditions: '{{ command == "button_2_double_press" }}'
+        sequence: !input Button_2_2x_Press
+      - conditions: '{{ command == "button_2_triple_press" }}'
+        sequence: !input Button_2_3x_Press
+      - conditions: '{{ command == "button_2_quadruple_press" }}'
+        sequence: !input Button_2_2x_Press
+      - conditions: '{{ command == "button_2_quintuple_press" }}'
+        sequence: !input Button_2_5x_Press
+      - conditions: '{{ command == "button_2_hold"}}'
+        sequence: !input Button_2_Long_Press
+      - conditions: '{{ command == "button_2_short_release" }}'
+        sequence: !input Button_2_Long_Release
+      - conditions: '{{ command == "button_2_long_release" }}'
+        sequence: !input Button_2_Short_Release
 
-      - conditions: '{{ command == "recall" and scene_id == 5 }}'
-        sequence: !input Scene_Three_Press
+      # Button 3
+      - conditions: '{{ command == "button_3_press" }}'
+        sequence: !input Button_3_1x_Press
+      - conditions: '{{ command == "button_3_double_press" }}'
+        sequence: !input Button_3_2x_Press
+      - conditions: '{{ command == "button_3_triple_press" }}'
+        sequence: !input Button_3_3x_Press
+      - conditions: '{{ command == "button_3_quadruple_press" }}'
+        sequence: !input Button_3_4x_Press
+      - conditions: '{{ command == "button_3_quintuple_press" }}'
+        sequence: !input Button_3_5x_Press
+      - conditions: '{{ command == "button_3_hold"}}'
+        sequence: !input Button_3_Long_Press
+      - conditions: '{{ command == "button_3_short_release" }}'
+        sequence: !input Button_3_Long_Release
+      - conditions: '{{ command == "button_3_long_release" }}'
+        sequence: !input Button_3_Short_Release
 
-      - conditions: '{{ command == "recall" and scene_id == 4 }}'
-        sequence: !input Scene_Four_Press
+      # Button 4
+      - conditions: '{{ command == "button_4_press" }}'
+        sequence: !input Button_4_1x_Press
+      - conditions: '{{ command == "button_4_double_press" }}'
+        sequence: !input Button_4_2x_Press
+      - conditions: '{{ command == "button_4_triple_press" }}'
+        sequence: !input Button_4_3x_Press
+      - conditions: '{{ command == "button_4_quadruple_press" }}'
+        sequence: !input Button_4_4x_Press
+      - conditions: '{{ command == "button_4_quintuple_press" }}'
+        sequence: !input Button_4_5x_Press
+      - conditions: '{{ command == "button_4_hold"}}'
+        sequence: !input Button_4_Long_Press
+      - conditions: '{{ command == "button_4_short_release" }}'
+        sequence: !input Button_4_Long_Release
+      - conditions: '{{ command == "button_4_long_release" }}'
+        sequence: !input Button_4_Short_Release
 
-# The hold functionality works, but it triggers on all 4 buttons.
-      - conditions: '{{ command == "step_with_on_off" and step_mode == "StepMode.Down" and step_size == 255}}'
-        sequence: !input Scene_One_Hold
-
-# Commented out because I have not found a way to seperate these events from each other, yet
-      #- conditions: '{{ command_type == "recall" and scene_id == 1}}'
-      #  sequence: !input Scene_Two_Hold
-
-      #- conditions: '{{ command_type == "recall" and scene_id == 1}}'
-      #  sequence: !input Scene_Three_Hold
-
-      #- conditions: '{{ command_type == "recall" and scene_id == 1}}'
-      #  sequence: !input Scene_Four_Hold
-
-      - conditions: '{{ command == "step_with_on_off" and step_mode == "StepMode.Up" and step_size < 255}}'
+      # Rotary Dial
+      - conditions: '{{ command == "step_with_on_off" and step_mode == "StepMode.Up"}}'
         sequence: !input Rotary_Clockwise
-
-      - conditions: '{{ command == "step_with_on_off" and step_mode == "StepMode.Down" and step_size < 255}}'
+      - conditions: '{{ command == "step_with_on_off" and step_mode == "StepMode.Down"}}'
         sequence: !input Rotary_Counterclockwise

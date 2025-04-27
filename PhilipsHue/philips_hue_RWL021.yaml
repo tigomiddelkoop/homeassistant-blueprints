@@ -16,198 +16,198 @@ blueprint:
     PowerOn_Press:
       name: Power On Press
       description: Power On has been pressed
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOn_Press2x:
       name: Power On Press 2x
       description: Power On has been pressed 2x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOn_Press3x:
       name: Power On Press 3x
       description: Power On has been pressed 3x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOn_Press4x:
       name: Power On Press 4x
       description: Power On has been pressed 4x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOn_Press5x:
       name: Power On Press 5x
       description: Power On has been pressed 5x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOn_Release:
       name: Power On Release
       description: Power On has been released
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOn_HoldPress:
       name: Power On Hold
       description: Power On has been held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOn_HoldRelease:
       name: Power On Hold Release
       description: Power On has been released after held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
 
     IncreaseBrightness_Press:
       name: Increase Brightness Press
       description: Decrease Brightness has been pressed
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Press2x:
       name: Increase Brightness Press 2x
       description: Increase Brightness has been pressed 2x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Press3x:
       name: Increase Brightness Press 3x
       description: Increase Brightness has been pressed 3x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Press4x:
       name: Increase Brightness Press 4x
       description: Increase Brightness has been pressed 4x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Press5x:
       name: Decrease Brightness Press 5x
       description: Increase Brightness has been pressed 5x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Release:
       name: Increase Brightness Release
       description: Increase Brightness has been released
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_HoldPress:
       name: Increase Brightness Hold
       description: Increase Brightness has been held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_HoldRelease:
       name: Increase Brightness Hold Release
       description: Increase Brightness has been released after held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
 
     DecreaseBrightness_Press:
       name: Decrease Brightness Press
       description: Decrease Brightness has been pressed
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Press2x:
       name: Decrease Brightness 2x
       description: Decrease Brightness has been pressed 2x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Press3x:
       name: Decrease Brightness 3x
       description: Decrease Brightness has been pressed 3x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Press4x:
       name: Decrease Brightness Press 4x
       description: Decrease Brightness has been pressed 4x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Press5x:
       name: Decrease Brightness Press 5x
       description: Decrease Brightness has been pressed 5x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Release:
       name: Decrease Brightness Release
       description: Decrease Brightness has been released
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_HoldPress:
       name: Decrease Brightness Hold
       description: Decrease Brightness has been held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_HoldRelease:
       name: Decrease Brightness Hold Release
       description: Decrease Brightness has been released after held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
 
     PowerOff_Press:
       name: Power Off Press
       description: Power Off has been pressed
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOff_Press2x:
       name: Power Off Press 2x
       description: Power Off has been pressed 2 times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOff_Press3x:
       name: Power Off Press 3x
       description: Power Off has been pressed 3 times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOff_Press4x:
       name: Power Off Press 4x
       description: Power Off has been pressed 4 times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOff_Press5x:
       name: Power Off Press 5x
       description: Power Off has been pressed 5 times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOff_Release:
       name: Power Off Release
       description: Power Off has been released
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOff_HoldPress:
       name: Power Off Hold
       description: Power Off has been held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     PowerOff_HoldRelease:
       name: Power Off Hold Release
       description: Power Off has been released after held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
 
 mode: single
 max_exceeded: silent

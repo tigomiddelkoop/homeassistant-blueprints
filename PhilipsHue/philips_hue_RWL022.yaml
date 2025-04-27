@@ -16,198 +16,198 @@ blueprint:
     Power_Press:
       name: Power Button Press
       description: Power button has been pressed
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Power_Press2x:
       name: Power Button Press 2x
       description: Power button has been pressed 2x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Power_Press3x:
       name: Power Button Press 3x
       description: Power button has been pressed 3x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Power_Press4x:
       name: Power Button Press 4x
       description: Power button has been pressed 4x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Power_Press5x:
       name: Power Button Press 5x
       description: Power button has been pressed 5x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Power_Release:
       name: Power Button Release
       description: Power button has been released
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Power_HoldPress:
       name: Power Button Hold
       description: Power button has been held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Power_HoldRelease:
       name: Power Button Hold Release
       description: Power button has been released after being held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
 
     IncreaseBrightness_Press:
       name: Increase Brightness Press
-      description: Decrease Brightness has been pressed
-      default: [ ]
+      description: Increase Brightness has been pressed
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Press2x:
       name: Increase Brightness Press 2x
       description: Increase Brightness has been pressed 2x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Press3x:
       name: Increase Brightness Press 3x
       description: Increase Brightness has been pressed 3x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Press4x:
       name: Increase Brightness Press 4x
       description: Increase Brightness has been pressed 4x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Press5x:
       name: Decrease Brightness Press 5x
       description: Increase Brightness has been pressed 5x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_Release:
       name: Increase Brightness Release
       description: Increase Brightness has been released
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_HoldPress:
       name: Increase Brightness Hold
       description: Increase Brightness held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     IncreaseBrightness_HoldRelease:
       name: Increase Brightness Hold Release
       description: Increase Brightness released after being held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
 
     DecreaseBrightness_Press:
       name: Decrease Brightness Press
       description: Decrease Brightness pressed
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Press2x:
       name: Decrease Brightness 2x
       description: Decrease Brightness has been pressed 2x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Press3x:
       name: Decrease Brightness 3x
       description: Decrease Brightness has been pressed 3x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Press4x:
       name: Decrease Brightness Press 4x
       description: Decrease Brightness has been pressed 4x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Press5x:
       name: Decrease Brightness Press 5x
       description: Decrease Brightness has been pressed 5x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_Release:
       name: Decrease Brightness Release
       description: Decrease Brightness has been released
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_HoldPress:
       name: Decrease Brightness Hold
       description: Decrease Brightness has been held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     DecreaseBrightness_HoldRelease:
       name: Decrease Brightness Hold Release
       description: Decrease Brightness has been released after being held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
 
     Hue_Press:
       name: Hue Press
       description: Hue button has been pressed
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Hue_Press2x:
       name: Hue Press 2x
       description: Hue button has been pressed 2x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Hue_Press3x:
       name: Hue Press 3x
       description: Hue button has been pressed 3x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Hue_Press4x:
       name: Hue Press 4x
       description: Hue button has been pressed 4x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Hue_Press5x:
       name: Hue Press 5x
       description: Hue button has been pressed 5x times
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Hue_Release:
       name: Hue Release
       description: Hue button has been released
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Hue_HoldPress:
       name: Hue Hold
       description: Hue button has been being held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
     Hue_HoldRelease:
       name: Hue Hold Release
       description: Hue button has been released after being held down
-      default: [ ]
+      default: []
       selector:
-        action: { }
+        action: {}
 
 mode: single
 max_exceeded: silent
