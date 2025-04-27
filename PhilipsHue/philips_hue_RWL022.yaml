@@ -223,7 +223,7 @@ action:
   - variables:
       button: "{{ trigger.event.data.args.button }}"
       press_type: "{{ trigger.event.data.args.press_type }}"
-      command_type: "{{ trigger.event.data.command }}"
+      command: "{{ trigger.event.data.command }}"
   - service: logbook.log
     data:
       name: Button
@@ -239,69 +239,76 @@ action:
   - service: logbook.log
     data:
       name: Command
-      message: "{{ command_type }}"
+      message: "{{ command }}"
   - choose:
-      - conditions: '{{ command_type == "on_press" }}'
+      # Power Button
+      - conditions: '{{ command == "on_press" }}'
         sequence: !input Power_Press
-      - conditions: '{{ command_type == "on_double_press" }}'
+      - conditions: '{{ command == "on_double_press" }}'
         sequence: !input Power_Press2x
-      - conditions: '{{ command_type == "on_triple_press" }}'
+      - conditions: '{{ command == "on_triple_press" }}'
         sequence: !input Power_Press3x
-      - conditions: '{{ command_type == "on_quadruple_press" }}'
+      - conditions: '{{ command == "on_quadruple_press" }}'
         sequence: !input Power_Press4x
-      - conditions: '{{ command_type == "on_quintuple_press" }}'
+      - conditions: '{{ command == "on_quintuple_press" }}'
         sequence: !input Power_Press5x
-      - conditions: '{{ command_type == "on_short_release" }}'
+      - conditions: '{{ command == "on_short_release" }}'
         sequence: !input Power_Release
-      - conditions: '{{ command_type == "on_hold" }}'
+      - conditions: '{{ command == "on_hold" }}'
         sequence: !input Power_HoldPress
-      - conditions: '{{ command_type == "on_long_release" }}'
+      - conditions: '{{ command == "on_long_release" }}'
         sequence: !input Power_HoldRelease
-      - conditions: '{{ command_type == "up_press" }}'
+
+      # Brightness Up
+      - conditions: '{{ command == "up_press" }}'
         sequence: !input IncreaseBrightness_Press
-      - conditions: '{{ command_type == "up_double_press" }}'
+      - conditions: '{{ command == "up_double_press" }}'
         sequence: !input IncreaseBrightness_Press2x
-      - conditions: '{{ command_type == "up_triple_press" }}'
+      - conditions: '{{ command == "up_triple_press" }}'
         sequence: !input IncreaseBrightness_Press3x
-      - conditions: '{{ command_type == "up_quadruple_press" }}'
+      - conditions: '{{ command == "up_quadruple_press" }}'
         sequence: !input IncreaseBrightness_Press4x
-      - conditions: '{{ command_type == "up_quintuple_press" }}'
+      - conditions: '{{ command == "up_quintuple_press" }}'
         sequence: !input IncreaseBrightness_Press5x
-      - conditions: '{{ command_type == "up_short_release" }}'
+      - conditions: '{{ command == "up_short_release" }}'
         sequence: !input IncreaseBrightness_Release
-      - conditions: '{{ command_type == "up_hold" }}'
+      - conditions: '{{ command == "up_hold" }}'
         sequence: !input IncreaseBrightness_HoldPress
-      - conditions: '{{ command_type == "up_long_release" }}'
+      - conditions: '{{ command == "up_long_release" }}'
         sequence: !input IncreaseBrightness_HoldRelease
-      - conditions: '{{ command_type == "down_press" }}'
+
+      # Brightness Down
+      - conditions: '{{ command == "down_press" }}'
         sequence: !input DecreaseBrightness_Press
-      - conditions: '{{ command_type == "down_double_press" }}'
+      - conditions: '{{ command == "down_double_press" }}'
         sequence: !input DecreaseBrightness_Press2x
-      - conditions: '{{ command_type == "down_triple_press" }}'
+      - conditions: '{{ command == "down_triple_press" }}'
         sequence: !input DecreaseBrightness_Press3x
-      - conditions: '{{ command_type == "down_quadruple_press" }}'
+      - conditions: '{{ command == "down_quadruple_press" }}'
         sequence: !input DecreaseBrightness_Press4x
-      - conditions: '{{ command_type == "down_quintuple_press" }}'
+      - conditions: '{{ command == "down_quintuple_press" }}'
         sequence: !input DecreaseBrightness_Press5x
-      - conditions: '{{ command_type == "down_short_release" }}'
+      - conditions: '{{ command == "down_short_release" }}'
         sequence: !input DecreaseBrightness_Release
-      - conditions: '{{ command_type == "down_hold" }}'
+      - conditions: '{{ command == "down_hold" }}'
         sequence: !input DecreaseBrightness_HoldPress
-      - conditions: '{{ command_type == "down_long_release" }}'
+      - conditions: '{{ command == "down_long_release" }}'
         sequence: !input DecreaseBrightness_HoldRelease
-      - conditions: '{{ command_type == "off_press" }}'
+
+      # Hue Button
+      - conditions: '{{ command == "off_press" }}'
         sequence: !input Hue_Press
-      - conditions: '{{ command_type == "off_double_press" }}'
+      - conditions: '{{ command == "off_double_press" }}'
         sequence: !input Hue_Press2x
-      - conditions: '{{ command_type == "off_triple_press" }}'
+      - conditions: '{{ command == "off_triple_press" }}'
         sequence: !input Hue_Press3x
-      - conditions: '{{ command_type == "off_quadruple_press" }}'
+      - conditions: '{{ command == "off_quadruple_press" }}'
         sequence: !input Hue_Press4x
-      - conditions: '{{ command_type == "off_quintuple_press" }}'
+      - conditions: '{{ command == "off_quintuple_press" }}'
         sequence: !input Hue_Press5x
-      - conditions: '{{ command_type == "off_short_release" }}'
+      - conditions: '{{ command == "off_short_release" }}'
         sequence: !input Hue_Release
-      - conditions: '{{ command_type == "off_hold" }}'
+      - conditions: '{{ command == "off_hold" }}'
         sequence: !input Hue_HoldPress
-      - conditions: '{{ command_type == "off_long_release" }}'
+      - conditions: '{{ command == "off_long_release" }}'
         sequence: !input Hue_HoldRelease
